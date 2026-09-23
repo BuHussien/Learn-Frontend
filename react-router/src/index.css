@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+nav .active{
+    color: #106b9d;
+}
+nav .active:hover{
+    color: #1fa1e7;
+}
+aside .active{
+    color: #106b9d;
+}
+aside .active:hover{
+    color: #1fa1e7;
+}
+
