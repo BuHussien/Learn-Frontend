@@ -1,0 +1,41 @@
+@mixin alert-type($name, $border-color, $bg-color, $color) {
+  .#{$name} {
+    border: 2px dotted $border-color;
+    margin: 25px;
+    padding: 1.3rem;
+    border-radius: 0.8rem;
+    background-color: $bg-color;
+    color: $color;
+    .alert-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .title {
+        display: flex;
+        flex-direction: row;
+      }
+      span svg {
+        margin-right: 0.6rem;
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      margin-top: 1.2rem;
+      a{
+        color: darkblue;
+        text-decoration:wavy underline;
+      }
+    }
+  }
+}
+@include alert-type('success', #198754, #146c43, #d1e7dd);
+@include alert-type('error', #dc3545, #b02a37, #f8d7da);
+@include alert-type('warning', #fd7e14, #cc6500, #fff3cd);
+@include alert-type('info', #0d6efd, #0a58ca, #cfe2ff);
+@include alert-type('primary', #156dfa, #585c5f, black);
